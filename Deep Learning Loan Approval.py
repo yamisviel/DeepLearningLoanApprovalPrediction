@@ -190,20 +190,27 @@ all_true = []
 # Thresholds to test
 thresholds = [0.5, 0.4, 0.3]
 
-for threshold in thresholds:
-    all_preds = []
-    all_true = []
-    
-    with torch.no_grad():
-        for X_batch, y_batch in val_dataloader:
-            
-            X_batch = X_batch.to(device)
-            outputs = model(X_batch)
-            preds = (torch.sigmoid(outputs) > threshold).float()
-            all_preds.extend(preds.cpu().numpy().flatten())
-            all_true.extend(y_batch.numpy().flatten())
+with open("classification_reports.txt", "w") as f:
+    for threshold in thresholds:
+        all_preds = []
+        all_true = []
+        
+        with torch.no_grad():
+            for X_batch, y_batch in val_dataloader:
+                X_batch = X_batch.to(device)
+                outputs = model(X_batch)
+                preds = (torch.sigmoid(outputs) > threshold).float()
+                all_preds.extend(preds.cpu().numpy().flatten())
+                all_true.extend(y_batch.numpy().flatten())
 
-    print(f"\n" + "="*30)
-    print(f"Classification Report: Threshold {threshold}")
-    print("="*30)
-    print(classification_report(all_true, all_preds))
+        report = classification_report(all_true, all_preds)
+        header = f"\n{'='*30}\nClassification Report: Threshold {threshold}\n{'='*30}\n"
+        
+        # Write to file
+        f.write(header)
+        f.write(report)
+        
+        print(header)
+        print(report)
+
+print("All reports have been saved to classification_reports.txt")
