@@ -1,0 +1,3 @@
+person_income,loan_amnt,loan_int_rate,loan_percent_income,loan_intent_DEBTCONSOLIDATION,loan_intent_EDUCATION,loan_intent_HOMEIMPROVEMENT,loan_intent_MEDICAL,loan_intent_PERSONAL,loan_intent_VENTURE,person_home_ownership_MORTGAGE,person_home_ownership_OTHER,person_home_ownership_OWN,person_home_ownership_RENT,previous_loan_defaults_on_file_No,previous_loan_defaults_on_file_Yes,loan_probability,prediction
+71948.0,35000.0,16.02,0.49,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,1.0,1.0
+12282.0,1000.0,11.14,0.08,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,4.2808548e-08,0.0
