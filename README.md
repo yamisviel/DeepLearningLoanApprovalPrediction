@@ -14,6 +14,8 @@ This project implements an end-to-end deep learning pipeline using PyTorch to pr
 | **model_metadata.pkl** | Serialized metadata (Mean/Std/Column headers) required to ensure new data is preprocessed identically to training data. |
 | **Train Val Loss Curve.png** | Visualization of the training process showing model convergence over epochs. |
 | **loan_predictions.csv** | Sample output file containing loan probabilities and final approval predictions for a batch of applicants. |
+| **classification_reports.txt** | Text file containing precision, recall, and F1-score for various probability thresholds (0.5, 0.4, 0.3). |
+
 
 ## 🚀 Workflow Overview
 
