@@ -35,6 +35,7 @@ To run this project, you will need **Python 3.8+** and the following libraries:
 ### Utilities
 * **Joblib**: For serializing and loading the preprocessing metadata.
 * **Matplotlib**: For plotting training and validation loss curves.
+* **Seaborn**: Statistical data visualization (used in EDA).
 * **Tqdm**: For progress bars during training loops.
 
 ## 🏃 How to Run
